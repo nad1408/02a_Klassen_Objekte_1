@@ -2,51 +2,31 @@ package com.cc.java;
 
 public class Cat {
 
-        private String name;
-        private String furcolor;
-        private Integer age;
-
-public void setName(String name) {
-    this.name = name;
-}            
-
-public String getName() {
-    return this.name;
-}            
-
-public void setFurColor(String furcolor) {
-    this.furcolor = furcolor;
-}            
-
-public String getFurColor() {
-    return this.furcolor;
-}            
-
-public void setAge(int age) {
-    this.age = age;
-}            
-
-public Integer getAge() {
-    return this.age;
-}            
+Props cat_Props;
+Cat(String name, furColors furColor, int age) {
+    cat_Props = new Props();
+    cat_Props.setName(name);
+    cat_Props.setFurColor(furColor);
+    cat_Props.setAge(age);
+    System.out.println("Erstellt");
+}
 
 String tellYourName() {
-    return (this.name);
+    return (this.cat_Props.name);
 }
 
-String tellYourFurColor() {
-    return (this.furcolor);
+furColors tellYourFurColor() {
+    return (this.cat_Props.furcolor);
 }
-    
+
 Integer tellYourAge() {
-    return (this.age);
+    return (this.cat_Props.age);
 }
-
 
 String[] tellField() {
     String[] field = new String[3];
     field[0] = tellYourName();
-    field[1] = tellYourFurColor();
+    field[1] = tellYourFurColor().name();
     field[2] = Integer.toString(tellYourAge());
     return field;
 }
