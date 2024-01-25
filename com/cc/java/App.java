@@ -8,18 +8,18 @@ public class App {
         Cat cat = new Cat("Alonzo", "grey", 35); 
 
         // Ausgaben
-        output(cat.tellYourName());
-        output(cat.tellYourFurColor());
-        output(String.valueOf(cat.tellYourAge()));  // int --> String
+        output(cat.getName());
+        output(cat.getFurColor());
+        output(String.valueOf(cat.getName()));  // int --> String
 
         output("---------------");
 
         Cat cat2 = new Cat("Grizabella", "white", 29);
 
         // Ausgabe
-        output(cat2.tellYourName());
-        output(cat2.tellYourFurColor());
-        output(Integer.toString(cat2.tellYourAge()));  // int --> String
+        output(cat2.getName());
+        output(cat2.getFurColor());
+        output(Integer.toString(cat2.getAge()));  // int --> String
 
     }
 
