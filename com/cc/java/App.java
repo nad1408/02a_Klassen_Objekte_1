@@ -7,7 +7,7 @@ public class App {
         // Objekt erzeugen
         Cat cat = new Cat("Alonzo", "grey", 35); 
 
-        // Ausgabe
+        // Ausgaben
         output(cat.tellYourName());
         output(cat.tellYourFurColor());
         output(String.valueOf(cat.tellYourAge()));  // int --> String
@@ -30,3 +30,4 @@ public class App {
       
 
 }
+ 
