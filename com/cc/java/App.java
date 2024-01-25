@@ -1,41 +1,32 @@
 package com.cc.java;
 
-import java.util.Arrays;
-
 public class App {
     
     public static void main(String[] args) {
 
-        // Objekt entsteht
-        Cat cat = new Cat(
-        "Alonzo",
-        furColors.yellow,
-        35
-        );
+        // Objekt erzeugen
+        Cat cat = new Cat("Alonzo", "grey", 35); 
 
-        // // output methode
-        output(cat.tellField());
+        // Ausgabe
+        output(cat.tellYourName());
+        output(cat.tellYourFurColor());
+        output(String.valueOf(cat.tellYourAge()));  // int --> String
 
-    }
+        output("---------------");
 
-// static output String
-public static void output(String outputStr) {
-    System.out.println(outputStr);
-    }
-    
-// static output String // overload of output method
-public static void output(furColors outputStr) {
-    System.out.println(outputStr);
-    }
-     
-// static output String[] // overload of output method
-public static void output(String[] outputStr) {
-    System.out.println(Arrays.toString(outputStr));
+        Cat cat2 = new Cat("Grizabella", "white", 29);
+
+        // Ausgabe
+        output(cat2.tellYourName());
+        output(cat2.tellYourFurColor());
+        output(Integer.toString(cat2.tellYourAge()));  // int --> String
+
     }
 
-// static output String[] // overload of output method
-public static void output(Integer outputStr) {
-    System.out.println(outputStr);
+   // statische Methode --- in Klasse
+    public static void output(String outputStr){
+        System.out.println(outputStr);
     }
+      
 
 }
